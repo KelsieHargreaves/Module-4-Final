@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Radley:ital@0;1&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Radley", serif;
+}
+
+body {
+    background-color: #af4c0f23;
+    display: flex;
+    justify-content: center;
+    overflow-x: hidden;
+}
+
+
+.orange {
+    color: #af4c0f;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+h2 {
+    font-size: 24px;
+}
+
+.container {
+    width: 100%;
+    padding: 0 64px;
+}
+
+.row {
+    margin: 0 80px; 
+}
+
+/*Navigation*/
+.nav__container {
+    width: 100vw;
+}
+
+.nav__row {
+    margin: 0 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 200px;
+}
+
+.nav__lists {
+    display: flex;
+    list-style-type: none;
+}
+
+.nav__link {
+    text-decoration: none;
+    color: black;
+    padding: 0 24px;
+    font-size: 20px;
+    font-weight: 500;
+
+}
+
+.nav__contact {
+    border: 1px solid #af4c0f;
+    border-radius: 50px;
+    background-color: #af4c0f;
+    color: white;
+    padding: 12px 32px;
+}
+
+/* Main */ 
+
+.main__row {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.main__header {
+    text-align: center;
+}
+
+.main__sub-header {
+    padding: 52px 0;
+}
+
+input {
+    width: 350px;
+    height: 48px;
+    border-radius: 16px;
+    border: 1px solid #471a14;
+    font-size: 20px;
+    padding-left: 16px;
+}
+
+.search__button {
+    font-size: 20px;
+    border-radius: 16px;
+    padding: 10px 32px;
+    border: 1px solid #471a14;
+    background-color: #471a14;
+    color: white;
+}
+
+.sales__img {
+    width: 100%;
+    height: 50vh;
+}
