@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FilmInsight</title>
     <link rel="stylesheet" href="./style.css">
-    <script href="./script.js"></script>
+    <script src="https://kit.fontawesome.com/3e95287597.js" crossorigin="anonymous"></script>
+    <script src="./script.js"></script>
 </head>
 
 <body>
@@ -31,7 +32,10 @@
                     </h2>
                     <div class="input__field">
                         <input type="text" placeholder="Search by Title, Genre, or Actors"></input>
-                        <button class="search__button">Search</button>
+                        <button class="search__button" onClick="openSpinner(this)">
+                            <span class="button__text">Search</span>
+                            <span class="spinner"><i class="fa-solid fa-spinner"></i></span>
+                        </button>
                     </div>
                 </div>
                 <div class="row img__row">

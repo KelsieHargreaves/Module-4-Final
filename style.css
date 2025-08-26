@@ -152,6 +152,7 @@ input {
 }
 
 .search__button {
+    position: relative;
     font-size: 20px;
     border-radius: 16px;
     padding: 10px 32px;
@@ -159,11 +160,35 @@ input {
     background-color: #471a14;
     color: white;
     transition: all 300ms ease;
+    overflow: hidden;
+    cursor: pointer;
 }
 
 .search__button:hover {
     background-color: #661d14;
     border-color: #661d14;
+}
+
+.spinner {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 40px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {transform: translate(-50%, -50%) rotate(360deg);}
+}
+
+.search__button.loading .spinner {
+  display: block;
+}
+
+.search__button.loading .button__text {
+  visibility: hidden;
 }
 
 .sales__img {

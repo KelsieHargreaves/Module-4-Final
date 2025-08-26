@@ -219,6 +219,12 @@ h2 {
     font-size: 20px;
 }
 
+.ten__stars {
+    display: flex;
+    flex-wrap: wrap;
+    width: 25%;
+}
+
 .star__slider {
     font-size: 16px;
 }
@@ -233,8 +239,61 @@ h2 {
     accent-color: #af4c0f;  
 }
 
+.movies__results {
+    position: relative;
+}
+
 .fa-spinner {
+    
+}
+
+.movies__spinner {
+    display: none;
+    top: 50%;
+    left: 50%;
     color: #af4c0f;
     font-size: 60px;
-    padding-top: 56px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {transform: translate(-50%, -50%) rotate(360deg)}
+}
+
+.movies__loading .fa-spinner {
+    display: block;
+}
+
+.movie {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+}
+
+.movie__results {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.movie__img {
+    width: 100%;
+    margin-bottom: 8px;
+}
+
+.movie__info {
+    width: 100%;
+    font-size: 16px;
+    text-align: left;
+}
+
+.movie__rating {
+    display: flex;
+    width: 100%;
+}
+
+.movie__star {
+    font-size: 14px;
 }

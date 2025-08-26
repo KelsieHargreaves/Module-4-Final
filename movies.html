@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movies</title>
     <link rel="stylesheet" href="./movies.css">
-    <script href="./script.js"></script>
     <script src="https://kit.fontawesome.com/3e95287597.js" crossorigin="anonymous"></script>
+    <script src="./movies.js"></script>
 </head>
 
 <body>
@@ -40,20 +40,30 @@
         <div class="container main__container">
             <div class="row main__row">
                 <h1 class="main__title">Search results:</h1>
-                <div class="main__preferences">
-                    <h2 class="main__preferences--title">Rating: <i class="fa-solid fa-star"></i> to <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></h2>
+                <!-- <div class="main__preferences">
+                    <h2 class="main__preferences--title">Rating: 1 <i class="fa-solid fa-star"></i> to 10 <i class="fa-solid fa-star"></i></h2>
                     <div class="slider__container">
                         <i class="star__slider fa-solid fa-star"></i>
-                        <input type="range" min="1" max="5" value="1" id="starRange" class="slider">
-                        <div class="five__stars">
-                            <i class="star__slider fa-solid fa-star"></i><i class="star__slider fa-solid fa-star"></i><i class="star__slider fa-solid fa-star"></i><i class="star__slider fa-solid fa-star"></i><i class="star__slider fa-solid fa-star"></i>
+                        <input type="range" min="1" max="10" value="1" id="starRange" class="slider">
+                        <div class="ten__stars">
+                            <i class="star__slider fa-solid fa-star"></i><i class="star__slider fa-solid fa-star"></i><i class="star__slider fa-solid fa-star"></i><i class="star__slider fa-solid fa-star"></i><i class="star__slider fa-solid fa-star"></i><i class="star__slider fa-solid fa-star"></i><i class="star__slider fa-solid fa-star"></i><i class="star__slider fa-solid fa-star"></i><i class="star__slider fa-solid fa-star"></i><i class="star__slider fa-solid fa-star"></i>
                         </div>
                     </div>
                     <div class="loading">
                     </div>
-                </div> 
+                </div>  -->
             </div>
-            <i class="fa-solid fa-spinner"></i>
+            <div class="movies__results">
+                <div class="movies__spinner">
+                    <i class="fa-solid fa-spinner"></i>
+                </div>
+                <div class="movies__wrapper">
+                    <div class="movie">
+                        <img class="movie__img" src="https://th.bing.com/th/id/R.e217c2f076998c955f9e4de1a2c85469?rik=kuJAPj0BrR3y4A&pid=ImgRaw&r=0" alt="">
+                        <h3 class="movie__info">Guardians of the Galaxy Vol. 2, 2017</h3>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 </body>
