@@ -63,7 +63,36 @@ h2 {
     padding: 0 24px;
     font-size: 20px;
     font-weight: 500;
+}
 
+
+.nav__text {
+     position: relative;
+     display: inline-block;
+}
+.nav__text::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 100%;
+    transform: scaleX(0);
+    transform-origin: left;
+    background-color: #af4c0f;
+    transition: all 500ms ease;
+}
+
+.nav__lists li:nth-child(2) .nav__text::after {
+    background-color: black;
+}
+
+.nav__text:hover::after {
+    transform: scaleX(1);
+}
+
+.nav__contact .nav__text::after {
+    display: none;
 }
 
 .nav__contact {
@@ -72,6 +101,12 @@ h2 {
     background-color: #af4c0f;
     color: white;
     padding: 12px 32px;
+    transition: all 300ms ease;
+}
+
+.nav__contact:hover {
+    background-color: #d86016;
+    border-color: #d86016;
 }
 
 /* Main */ 
@@ -106,9 +141,16 @@ input {
     border: 1px solid #471a14;
     background-color: #471a14;
     color: white;
+    transition: all 300ms ease;
+}
+
+.search__button:hover {
+    background-color: #661d14;
+    border-color: #661d14;
 }
 
 .sales__img {
     width: 100%;
     height: 50vh;
 }
+

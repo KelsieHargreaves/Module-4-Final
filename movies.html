@@ -7,6 +7,7 @@
     <title>Movies</title>
     <link rel="stylesheet" href="./movies.css">
     <script href="./script.js"></script>
+    <script src="https://kit.fontawesome.com/3e95287597.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -20,20 +21,40 @@
                     <img class="logo" src="./assets/FilmInsight logo.svg" alt="">
                 </figure>
                 <ul class="nav__lists">
-                    <li><a href="./index.HTML" class="nav__link"><span class="orange">Home</span></a></li>
-                    <li><a href="./movies.html" class="nav__link">Movies</a></li>
-                    <li><a href="#" class="nav__link  nav__contact">Contact</a></li>
+                    <li><a href="#" class="nav__link"><span class="nav__text">Home</span></a></li>
+                    <li><a href="./movies.html" class="nav__link"><span class="nav__text">Movies</span></a></li>
+                    <li><a href="#" class="nav__link  nav__contact"><span class="nav__text">Contact</span></a></li>
                 </ul>
             </div>
             <div class="nav__content">
                 <h1 class="nav__header">Browse our movies</h1>
                 <div class="nav__search--bar">
                     <input class="nav__input" type="text" placeholder="Search by Title, Genre, or Actors">
-                    <button class="nav__input--button"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    <button class="nav__input--button">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
                 </div>
             </div>
+            <div class="loading__bar"></div>
         </div>
-
+        <div class="container main__container">
+            <div class="row main__row">
+                <h1 class="main__title">Search results:</h1>
+                <div class="main__preferences">
+                    <h2 class="main__preferences--title">Rating: <i class="fa-solid fa-star"></i> to <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></h2>
+                    <div class="slider__container">
+                        <i class="star__slider fa-solid fa-star"></i>
+                        <input type="range" min="1" max="5" value="1" id="starRange" class="slider">
+                        <div class="five__stars">
+                            <i class="star__slider fa-solid fa-star"></i><i class="star__slider fa-solid fa-star"></i><i class="star__slider fa-solid fa-star"></i><i class="star__slider fa-solid fa-star"></i><i class="star__slider fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="loading">
+                    </div>
+                </div> 
+            </div>
+            <i class="fa-solid fa-spinner"></i>
+        </div>
     </section>
 </body>
 
