@@ -117,6 +117,23 @@ h2 {
    align-items: center;
 }
 
+.main__header, .main__sub-header, .input__field {
+    opacity: 0;
+    transform: translateY(300px);
+    animation: slideUp 1s forwards;
+}
+
+.main__header {animation-delay: 0.1s;}
+.main__sub-header {animation-delay: 0.5s;}
+.input__field {animation-delay: 0.9s;}
+
+@keyframes slideUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .main__header {
     text-align: center;
 }
@@ -152,5 +169,6 @@ input {
 .sales__img {
     width: 100%;
     height: 50vh;
+    position: relative;
+    z-index: 2;
 }
-
