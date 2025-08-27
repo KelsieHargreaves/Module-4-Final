@@ -7,6 +7,13 @@
     font-family: "Radley", serif;
 }
 
+#landing__page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
 body {
     background-color: #af4c0f23;
     display: flex;
@@ -38,7 +45,7 @@ h2 {
 
 /*Navigation*/
 .nav__container {
-    width: 100vw;
+    width: 100%;
 }
 
 .nav__row {
@@ -49,7 +56,7 @@ h2 {
 }
 
 .logo {
-    width: 200px;
+    width: 50%;
 }
 
 .nav__lists {
@@ -202,8 +209,106 @@ input {
     z-index: 2;
 }
 
-@media (max-width 780px) {
-    .nav__link{
-        font-size: 8px;
+@media (max-width: 680px) {
+    
+    .nav__container {
+        margin: 0 32px;
+    }
+
+    .nav__link {
+        padding: 0 12px;
+    }
+
+     .nav__home {
+        display: none;
+    }
+   
+}
+
+@media (max-width: 576px) {
+    
+    .nav__container {
+        padding: 0 64px;
+    }
+
+
+    .nav__home {
+        display: none;
+    }
+    
+    .nav__link {
+        font-size: 20px;
+        padding: 0 8px;
+    }
+
+    .nav__contact {
+        padding: 0 8px;
+    }
+
+    /* .logo {
+        width: 200px;
+    } */
+   
+}
+
+@media (max-width: 355px) {
+    .nav__container {
+        width: 100%;
+        max-width: 300px;
+        padding: 0 16px;
+    }
+
+    .nav__row {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .logo {
+        width: 100px;
+    }
+
+    .nav__link {
+        font-size: 16px;
+    }
+
+    .main__container {
+        width: 100%;
+        max-width: 300px;
+        padding: 0;
+    }
+
+    .main__row {
+        margin: 0;
+    }
+
+    .main__header {
+        font-size: 32px;
+    }
+
+    .main__sub-header {
+        text-align: center;
+        padding: 32px;
+        font-size: 20px;
+    }
+
+    .input__field {
+        width: 100%;
+        max-width: 330px;
+    }
+
+    input {
+        width: 80%;
+        font-size: 16px;
+    }
+
+    .search__button {
+        padding: 0 8px;
+        font-size: 16px;
+    }
+
+    .img__row {
+        width: 100%;
+        max-width: 330px;
+        margin: 0;
     }
 }
