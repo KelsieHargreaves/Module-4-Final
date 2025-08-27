@@ -1,55 +1,48 @@
-const resultsContainer = document.querySelector(".movies__results")
-const spinner = resultsContainer.querySelector(".movies__spinner")
-const moviesWrapper = resultsContainer.querySelector(".movies__wrapper")
-const searchInput = document.querySelector(".nav__input")
-const searchButton = document.querySelector(".nav__input--button")
+const moviesWrapper = document.querySelector('.movies')
+const searchName = document.querySelector('.search__name')
 
-async function renderMovies(query = "Avengers") {
-    spinner.style.display = "block"
-    moviesWrapper.innerHTML = ""
-    
-    resultsContainer.querySelectorAll(".movie").forEach(m => m.remove())
-
-   try {
-        const response = await fetch(`https://www.omdbapi.com/?s=${encodeURIComponent(query)}&apikey=5be1f0a6`)
-        const data = await response.json()
-        
-        if (data.Response === "True") {
-            moviesWrapper.innerHTML = data.Search.map(movie => 
-                `<div class="movie">
-                        <img src="${movie.Poster}" alt="">
-                        <h3>${movie.Title}, ${movie.Year}</h3>
-                </div>`).join("")
-        }
-
-        else {
-            moviesWrapper.innerHTML = `<p>No results found</p>`
-        }
-
-    }
-        catch (err) {
-            moviesWrapper.innerHTML = `<p>Error loading movies</p>`
-            console.error(err)
-        }
-
-        spinner.style.display = "none"
+function searchChange(event) {
+    renderMovies(event.target.value)
+    searchName.innerHTML = event.target.value
 
 }
 
-searchButton.addEventListener("click", () => {
-    const query = searchInput.value.trim()
-    if (query) {
-        renderMovies(query)
-    }
-})
+let currentMovies = []
 
-searchInput.addEventListener("keypress", (e) => {
-    if (e.key === "Enter") {
-        const query = searchInput.value.trim()
-        if (query) {
-            renderMovies(query)
-        }
-    }
-})
+async function renderMovies(searchTerm) {
+    const response = await fetch(
+        `http://www.omdbapi.com/?s=${searchTerm}&apikey=5be1f0a6`
+    )
+    const data = await response.json()
+    currentMovies = data.Search
+    displayMovies(currentMovies)
+}
 
-renderMovies()
+function displayMovies(movieList) {
+    moviesWrapper.innerHTML = movieList
+    .map((movie) => {
+        return `
+        <div class="movie">
+        <img class="movie__img" src="${movie.Poster}" alt="">
+        <h3 class="movie__info">${movie.Title}, ${movie.Year}</h3>
+        <button class="movie__info--button">Learn More</button>
+        </div>  
+        `
+    })
+    .join('')
+}
+
+function sortChange(event) {
+    const sortOption = event.target.value
+    let sortedMovies = [...currentMovies]
+
+    if (sortOption === "newest") {
+        sortedMovies.sort((a,b) => b.Year - a.Year)
+    }
+
+    else if (sortOption === "oldest") {
+        sortedMovies.sort((a,b) => a.Year - b.Year)
+    }
+
+    displayMovies(sortedMovies)
+}

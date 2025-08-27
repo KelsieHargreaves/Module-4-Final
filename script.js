@@ -3,7 +3,8 @@ function openSpinner(button) {
     button.disabled = true;
 
     setTimeout(() => {
-        window.location.href = "./movies.html";
+        window.location.href = `./movies.html`;
     }, 300)
 
 }
+

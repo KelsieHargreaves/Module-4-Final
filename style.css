@@ -142,6 +142,10 @@ h2 {
     padding: 52px 0;
 }
 
+.input__field {
+    display: flex;
+}
+
 input {
     width: 350px;
     height: 48px;
@@ -196,4 +200,10 @@ input {
     height: 50vh;
     position: relative;
     z-index: 2;
+}
+
+@media (max-width 780px) {
+    .nav__link{
+        font-size: 8px;
+    }
 }

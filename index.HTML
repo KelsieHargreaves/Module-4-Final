@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./style.css">
     <script src="https://kit.fontawesome.com/3e95287597.js" crossorigin="anonymous"></script>
     <script src="./script.js"></script>
+    <script src="./movies.js"></script>
 </head>
 
 <body>
@@ -31,8 +32,8 @@
                     <h2 class="main__sub-header">Chose your favorite films with <span class="orange">FilmInsight</span>
                     </h2>
                     <div class="input__field">
-                        <input type="text" placeholder="Search by Title, Genre, or Actors"></input>
-                        <button class="search__button" onClick="openSpinner(this)">
+                        <input type="text" placeholder="Search by Title"></input>
+                        <button class="search__button" onClick="openSpinner(this)" onChange="searchChange(event)">
                             <span class="button__text">Search</span>
                             <span class="spinner"><i class="fa-solid fa-spinner"></i></span>
                         </button>

@@ -197,103 +197,54 @@ h2 {
     font-size: 32px;
 }
 
-.main__preferences {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.main__preferences--title {
+.random__span--for-no-reason {
+    white-space: no-wrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 500px;
+    color: white;
+    font-weight: 800;
     font-size: 24px;
-    padding-bottom: 16px;
+    margin-left: 5px;
+    display: inline-block;
+    vertical-align: middle;
 }
 
-.slider__container {
-    display: flex;
-    align-items: center;
-   
+.search__name {
+    color: black;
 }
 
-.fa-star {
-    color: #af4c0f;
-    font-size: 20px;
-}
-
-.ten__stars {
-    display: flex;
-    flex-wrap: wrap;
-    width: 25%;
-}
-
-.star__slider {
+.movieSort {
+    background-color: #d86016;
+    border: 1px solid #d86016;
+    border-radius: 8px;
     font-size: 16px;
-}
-
-
-.slider {
-    -webkit-appearance: none;
-    width: 300px;
-    border: 1px solid #af4c0f23;
-    border-radius: 55px;
-    background-color: #af4c0f23;
-    accent-color: #af4c0f;  
-}
-
-.movies__results {
-    position: relative;
-}
-
-.fa-spinner {
+    text-align: center;
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     
 }
 
-.movies__spinner {
-    display: none;
-    top: 50%;
-    left: 50%;
-    color: #af4c0f;
-    font-size: 60px;
-    position: absolute;
-    transform: translate(-50%, -50%);
-    animation: spin 1s linear infinite;
-}
-
-@keyframes spin {
-    to {transform: translate(-50%, -50%) rotate(360deg)}
-}
-
-.movies__loading .fa-spinner {
-    display: block;
+.movies {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    width: 100%;
+    max-width: 1300px;
+    padding: 32px;
 }
 
 .movie {
-    display: flex;
+    display: block;
     flex-direction: column;
-    width: 25%;
 }
 
-.movie__results {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 16px;
-}
-
-.movie__img {
-    width: 100%;
-    margin-bottom: 8px;
-}
-
-.movie__info {
-    width: 100%;
+.movie__info--button {
+    padding: 12px 18px;
+    border: 1px solid #d86016;
+    background-color: #d86016;
+    color: white;
     font-size: 16px;
-    text-align: left;
-}
-
-.movie__rating {
-    display: flex;
-    width: 100%;
-}
-
-.movie__star {
-    font-size: 14px;
+    border-radius: 15px;
+    cursor: pointer;
 }
