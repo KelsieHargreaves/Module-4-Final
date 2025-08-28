@@ -190,12 +190,16 @@ h2 {
     width: 10%;
     height: 100%;
     background-color: #af4c0f9c;
-    animation: scrolling 4s ease-in-out infinite alternate;
+   
+}
+
+.loading__bar.searching::before {
+     animation: scrolling 4s ease-in-out infinite alternate;
 }
 
 @keyframes scrolling {
     0% {
-        transform: translateX(0);
+        left: -10%;
         opacity: 0;
     }
 
@@ -208,7 +212,7 @@ h2 {
     }
 
     100% {
-        transform: translateX(1100%);
+        left: 110%;
         opacity: 0;
     }
 }
@@ -263,7 +267,8 @@ h2 {
 
 .movies {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    justify-content: center;
     gap: 24px;
     width: 100%;
     max-width: 1300px;
