@@ -11,7 +11,7 @@ let currentMovies = []
 
 async function renderMovies(searchTerm) {
     const response = await fetch(
-        `http://www.omdbapi.com/?s=${searchTerm}&apikey=5be1f0a6`
+        `https://www.omdbapi.com/?s=${searchTerm}&apikey=5be1f0a6`
     )
     const data = await response.json()
     currentMovies = data.Search
